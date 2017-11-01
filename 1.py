@@ -11,12 +11,17 @@ def sum_of_multiples(base, max_limit):
     return base * sum_multiple
 
 
-if __name__ == '__main__':
-    print sum_of_multiples(3, 10)
-    print sum_of_multiples(5, 10)
-    print sum_of_multiples(3, 1000)
-    print sum_of_multiples(5, 1000)
-
+def my_first_solution():
     result = sum_of_multiples(3, 1000) + sum_of_multiples(5, 1000) - sum_of_multiples(3 * 5, 1000)
-    print "solution is: ", result
+    return result
 
+
+# via YiannisAyianis
+def other_ways():
+    return sum(x for x in range(1000) if x%3==0 or x%5==0)
+
+
+if __name__ == '__main__':
+    print my_first_solution()
+    print other_ways()
+    
