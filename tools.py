@@ -29,7 +29,16 @@ def get_prime_factor(n):
     return prime_factor_list
 
 
+def is_palindromic(n):
+    str_n = str(n)
+    return str_n == str_n[::-1]
+
+
 if __name__ == '__main__':
-    #print get_prime_list(1, 10000)
-    print get_prime_factor(600851475143)
+    # print get_prime_list(1, 10000)
+    # print get_prime_factor(600851475143)
+    print is_palindromic(1)
+    print is_palindromic(121)
+    print is_palindromic(122)
+    print is_palindromic(1221)
 
